@@ -21,7 +21,8 @@ pub fn  main() !void {
     // vector
     const vector = try gv.generate_vector(gpa, size, min, max);
     defer gpa.free(vector);
-
+    gv.print_vector(vector, width, precision);
+    
     // CSR
     
     

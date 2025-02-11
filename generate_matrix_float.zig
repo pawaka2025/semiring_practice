@@ -50,5 +50,6 @@ pub fn print_row(row: []f64, width: usize, precision: usize) void {
     std.debug.print("\n", .{});
 }
 pub fn print_matrix(matrix: [][]f64, width: usize, precision: usize) void {
+    std.debug.print("Adjacency matrix: \n", .{});
     for (matrix) |*n| print_row(n.*, width, precision);
 }

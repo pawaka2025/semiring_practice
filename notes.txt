@@ -1,0 +1,36 @@
+CSR Usage Based on Value Types
+1️⃣ Round Numbers (Integers: 0, 1, 2, ...)
+Use Case: Graph adjacency matrices, combinatorial optimization, and integer linear algebra.
+Applications:
+Unweighted graphs → 0 (no edge) and 1 (edge exists).
+Weighted graphs → Integer weights (e.g., distances in a road network).
+Integer linear algebra → Used in integer-only optimization problems.
+Finite-state automata & Markov Chains → State transitions.
+2️⃣ Floating-Point Numbers (f64)
+Use Case: General scientific computing, numerical simulations, and physics-based models.
+Applications:
+Finite Element Method (FEM) & Computational Physics → Stiffness matrices.
+Machine learning models (e.g., embeddings, TF-IDF) → Storing sparse feature representations.
+Quantum mechanics & PDE solvers → Wavefunctions, heat diffusion, etc.
+Sparse neural networks → Weight matrices in ML.
+3️⃣ Positive & Negative Floating-Point Numbers ([-∞, +∞])
+Use Case: Energy-based models, wave simulations, and signed weight graphs.
+Applications:
+Signed-weighted graphs → Resistance networks, social network influence modeling.
+Electromagnetic simulations → Solving Maxwell’s equations.
+Financial modeling → CSR matrices used in portfolio optimization (positive/negative risk factors).
+Quantum computing simulations → Complex-valued sparse matrices (real + imaginary components).
+4️⃣ Probability Values ([0, 1])
+Use Case: Probabilistic programming, Markov models, and stochastic processes.
+Applications:
+Markov Chains & PageRank → Transition probability matrices.
+Bayesian networks & Probabilistic Graphical Models (PGMs) → Conditional probabilities stored sparsely.
+Stochastic Gradient Descent (SGD) optimization → Probability-weighted importance sampling.
+Game Theory & Reinforcement Learning → Transition probabilities in Markov Decision Processes (MDPs).
+5️⃣ Small Value Ranges ([small_min, small_max] like [-1e-5, 1e-5])
+Use Case: Numerical precision-critical applications (e.g., scientific computing, differential solvers).
+Applications:
+Sparse Jacobian & Hessian matrices → Used in optimization algorithms.
+Neural networks (floating point precision tuning) → Extremely small weights.
+Perturbation theory in physics → Small perturbation effects on large systems.
+Semiring calculations with near-zero values → Min-plus, max-plus algebra with tiny differences.
